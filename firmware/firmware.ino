@@ -40,7 +40,7 @@ int xlimit_pin1 = A2;
 int xlimit_pin2 = A3;
 int servopin = A1;
 Servo servoPen;
-int servo_position = 0;
+int servo_position = 30;
 
 float curX, curY, curZ;
 float tarX, tarY, tarZ; // target xyz position
@@ -333,7 +333,6 @@ void setup() {
   servoPen.write(servo_position);
   delay(1000);
 
-  goHome();
   requestNextCommand();
 }
 
